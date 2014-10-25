@@ -8,7 +8,37 @@
           </block>
         </value>
         <next>
-          <block type="movement_stop" id="29"></block>
+          <block type="movement_stop" id="29">
+            <next>
+              <block type="led_select" id="38" inline="true">
+                <field name="ACTION">ON</field>
+                <value name="LED">
+                  <block type="math_number" id="45">
+                    <field name="NUM">3</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="robot_delay" id="47" inline="true">
+                    <value name="DELAY">
+                      <block type="math_number" id="54">
+                        <field name="NUM">5000</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="led_select" id="63" inline="true">
+                        <field name="ACTION">OFF</field>
+                        <value name="LED">
+                          <block type="math_number" id="70">
+                            <field name="NUM">3</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
         </next>
       </block>
     </next>
